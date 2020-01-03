@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <!-- <link href="https://db.onlinewebfonts.com/c/fc7fd845ab9062a96aaa215295bf10b3?family=FS+Joey" rel="stylesheet"
+    type="text/css" /> -->
+  <style>
+    @import url('https://db.onlinewebfonts.com/c/fc7fd845ab9062a96aaa215295bf10b3?family=FS+Joey');
+
+    @font-face {
+      font-family: "FS Joey"; 
+      src: url("https://db.onlinewebfonts.com/t/fc7fd845ab9062a96aaa215295bf10b3.eot"); 
+      src: url("https://db.onlinewebfonts.com/t/fc7fd845ab9062a96aaa215295bf10b3.eot?#iefix") format("embedded-opentype"), 
+      url("https://db.onlinewebfonts.com/t/fc7fd845ab9062a96aaa215295bf10b3.woff2") format("woff2"), 
+      url("https://db.onlinewebfonts.com/t/fc7fd845ab9062a96aaa215295bf10b3.woff") format("woff"), 
+      url("https://db.onlinewebfonts.com/t/fc7fd845ab9062a96aaa215295bf10b3.ttf") format("truetype"); }
+
+    *{
+      font-family: "Roboto";
+    }
+    .small-cont {
+      width: 600px;
+      margin: auto;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      margin-top: 30px;
+      display: flex;
+    }
+
+    .big-title {
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      font-size: 60px;
+      color: #787272;
+    }
+
+    .link-purple {
+      color: #5c0e76;
+      font-size: 16px;
+    }
+
+    .link-grey {
+      color: #787272;
+      font-size: 16px;
+    }
+
+    .image-cont {
+      width: 700px;
+      height: 436px;
+      margin: auto;
+      margin-bottom: 37px;
+      align-items: center;
+      margin-top: 40px;
+      display: flex;
+    }
+
+    .whatsapp-logo {
+      width: 47px;
+      height: 47px;
+      margin-bottom: -15px;
+    }
+
+    .logo-cont {
+      width: 313px;
+      height: 71px;
+      margin: auto;
+      margin-bottom: 60px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .icon-cont {
+      width: 72px;
+      height: 72px;
+      margin-right: 0px;
+      margin-left: 42px;
+    }
+
+    .purple-Rectangle {
+      width: 700px;
+      height: 91px;
+      margin: auto;      
+      align-items: center;
+      display: flex;
+      background-color: rgba(92, 14, 118, 0.62);
+      opacity: 0.99;
+      margin-bottom: -131px;
+    }
+
+    .multicolor-Rectangle {
+      width: 700px;
+      height: 10px;
+      margin: auto;
+      margin-bottom: 24px;
+      font-family: FSJoey;
+      align-items: center;
+      display: flex;
+      background-image: linear-gradient(to right, #e6e460, #bbd866, #94c96e, #72b975, #57a77a, #359880, #148883, #007881, #006581, #00517a, #213c6b, #362554);
+    }
+
+    .yellow-Rectangle {
+      width: 700px;
+      height: 91px;
+      margin: auto;
+      margin-top: 61px;
+      margin-bottom: 33px;
+      font-family: FSJoey;
+      align-items: center;
+      display: flex;
+      background-color: #edec47;
+      font-size: 33px;
+      color: #5c0e76;
+    }
+
+    .yellow-text {
+      text-align: center;
+      align-items: center;
+      color: #edec47;
+      font-size: 35px;
+    }
+
+    .white-text {
+      color: #ffffff;
+      font-size: 35px;
+    }
+
+    .grey-text {
+      color: #8f8a8a;
+      font-size: 20px;
+      margin-bottom: 38px;
+    }
+
+    .grey-title {
+      margin-top: 32px;
+      align-items: center;
+      text-align: center;
+      color: #8f8a8a;
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+
+    .green-text {
+      color: #37857c;
+    }
+
+    .blue-text {
+      margin: auto;
+      margin-bottom: 8px;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      color: #0044ff;
+    }
+
+    .black-text {
+      margin: auto;
+      margin-bottom: 8px;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      color: #000000;
+    }
+
+    .small-text {
+      width: 624px;
+      margin: auto;
+      margin-bottom: 24px;
+      align-items: center;
+      text-align: center;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .very-small-text {
+      width: 624px;
+      margin: auto;
+      margin-bottom: 24px;
+      align-items: center;
+      text-align: center;
+      font-size: 13px;
+      color: #000000;
+    }
+
+    .purple-title {
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      font-size: 30px;
+      color: #5c0e76;
+    }
+
+    .text-cont {
+      width: 450px;
+      height: 52px;
+      font-family: FSJoey;
+      font-size: 20px;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      color: #5c0e76;
+    }
+
+    .text-cont-copy {
+      width: 635px;
+      height: 52px;
+      font-family: FSJoey;
+      font-size: 20px;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      color: #5c0e76;
+    }
+
+    .title-cont {
+      width: 569px;
+      height: 72px;
+      margin: auto;
+      margin-top: 15px;
+      margin-left: 40px;
+      margin-right: 32px;
+      margin-bottom: 40px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .space {
+      margin: 75px;
+    }
+
+    .button {
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: auto;
+      justify-content: center;
+      display: flex;
+      background: linear-gradient(to right, #37857c, #333056);
+      color: #ffffff;
+      width: 150px;
+      margin-top: 38px;
+      margin-bottom: 38px;
+      padding: 5px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .contenTrasnsparent {
+      width: 600px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      position: relative;
+      margin: auto;
+      margin-top: 0px;
+      margin-bottom: 50px;
+      padding: 30px;
+    }
+
+    .circle {
+      line-height: 25px;
+      text-align: center;
+      margin: 0px 40px;
+      width: 45px;
+      height: 45px;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 100%;
+      border-color: #8f8a8a;
+      color: #8f8a8a;
+    }
+
+    .image-circle {
+      width: 37px;
+      height: 30px;
+      margin-bottom: -19px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="small-cont">
+    <a class="link-purple" href="#">www.finaktiva.com</a>
+    <a class="link-grey" href="#">Ver este correo en tu navegador</a>
+  </div>
+
+  <div class="big-title">
+    <span>¡Hola, {{name}}!</span>
+  </div>
+
+  <div>
+    <div class="purple-Rectangle">
+      <span class="yellow-text">Te damos la bienvenida <b class="white-text"> a una nueva experiencia de crédito
+          digital </b></span>
+    </div>
+    <img class="image-cont"
+      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/women-image.png?alt=media&token=9fa61d10-8acc-4d45-a6e3-c1768c96f29c"
+      alt="">
+  </div>
+
+  <div class="text-cont">
+    <span> Falta muy poco para finalizar tu registro, <b class="grey-text"> sólo debes dar clic en el botón </b>
+      “Verificar”. </span>
+  </div>
+
+  <button class="button">
+    Verificar
+  </button>
+
+  <div class="text-cont-copy">
+    <span> Tendrás acceso a nuestros beneficios: <b class="grey-text"> Contenidos especializados, Networking y
+        conexiones valor con los que tu empresa llegará a otro nivel.</b> </span>
+
+  </div>
+
+  <div class="space"></div>
+
+  <div class="text-cont">
+    <span> Nuestro requisitos son: </span>
+  </div>
+
+  <div class="text-cont-copy">
+    <span class="grey-text">
+      1. Estar constituida como S.A, S.A.S o LTDA mínimo hace un año.
+    </span>
+  </div>
+
+  <div class="text-cont-copy">
+    <span class="grey-text">
+      2. Tener ventas anuales cercanas a los $300 millones.
+    </span>
+  </div>
+
+  <div class="yellow-Rectangle">
+    <img class="icon-cont"
+      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/icono-indicadores-2-d%403x.png?alt=media&token=50f465f1-d453-4747-8263-f3a02acf9576"
+      alt="">
+    <span class="title-cont">
+      <b class="green-text"> FINALIZA TU REGISTRO </b> y lleva tu empresa a otro nivel.
+    </span>
+  </div>
+
+  <div class="logo-cont">
+    <img class="logo-cont" src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/finaktiva-logo.png?alt=media&token=927e4b3a-b23a-4dcd-8493-2f55e0a02729" alt="">
+  </div>
+
+  <div class="purple-title">
+    <span>Comunícate con nosotros</span>
+  </div>
+
+  <div class="grey-title">
+    <img class="whatsapp-logo"
+      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/whatsapp-icon.svg?alt=media&token=34a5a4ad-dd69-446b-883e-4b57eac66b48"
+      alt="">
+    <span> Whatsapp: +57 300 516 65 72 </span>
+  </div>
+
+  <div class="contenTrasnsparent info-text option-yes-copy">
+    <div class="circle"><img class="image-circle"
+        src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/facebook-icon.svg?alt=media&token=6342fb8b-adb1-4350-b2de-870ba65b3a38"
+        alt=""></div>
+    <div class="circle"><img class="image-circle"
+        src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/twitter-icon.svg?alt=media&token=71c4505e-6458-4cb4-ac87-95aac2dc2254"
+        alt=""></div>
+    <div class="circle"><img class="image-circle"
+        src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/instagram-icon.svg?alt=media&token=69530707-51f9-4506-b944-2fee8c8d9957"
+        alt=""></div>
+    <div class="circle"><img class="image-circle"
+        src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/linkedin-icon.svg?alt=media&token=2f864078-7bfb-4803-b365-d313dc7b9b66"
+        alt=""></div>
+  </div>
+
+  <div class="multicolor-Rectangle"></div>
+
+  <div class="black-text">
+    <span>Contacto:</span>
+  </div>
+
+  <div class="small-text">
+    <span>Calle 16 Sur No. 43ª - 49 Oficina 301 - 304 | Edificio Corficolombiana Medellín
+      Tel: +57(4) 444 14 54 | Cel: +57 300 516 65 72</span>
+  </div>
+
+  <div class="black-text">
+    <span>Nuestro correo de contacto: <a class="blue-text" href="#"> comercial@finaktiva.com </a></span>
+  </div>
+
+  <div class="very-small-text">
+    <span>
+      *Recibes este email porque haces parte de la lista de correo electrónico de Finaktiva SAS. La finalidad es la
+      difusión comercial y de interés acerca de los servicios de Finaktiva,
+      así como canal de comunicación con nuestros clientes vía newsletter; además,
+      te informamos que los datos personales de nuestros clientes serán tratados de manera confidencial y no serán
+      compartidos con terceros. Si no deseas recibir más información,
+      en cada comunicación que recibas tendrás la opción de darte de baja con el link "Unsubscribe” o en caso de no
+      tener la opción dsisponible,
+      puedes solicitar este procedimiento en nuestros canales de servicio al cliente: hola@finaktiva.com y el número
+      telefónico (+57) 3005166572.
+      Finaktiva SAS nunca solicitará a sus clientes datos financieros como usuarios,
+      claves ni números de tarjetas de crédito con sus códigos de seguridad y
+      fechas de vencimiento mediante vínculos de correo electrónico.*
+    </span>
+  </div>
+
+</body>
+
+</html>
