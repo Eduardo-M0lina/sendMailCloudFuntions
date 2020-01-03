@@ -7,7 +7,27 @@ const fs = require('fs');
 const path  = require('path');
 
 /**
-* Here we're using Gmail to send 
+ * Function export to cloud funtions
+ */
+exports.sendMail = functions.https.onRequest((req, res) => {
+    cors(req, res, () => {
+        console.log("<---sendMail--->");
+        let transporter = generateTransport();
+        let htmlToSend = generateTemplate(req.body);
+        let mailOptions = generateEmail(req, htmlToSend);
+        return transporter.sendMail(mailOptions, (erro, info) => {
+            if(erro){
+                let resp = {"code": 500,"res" : "error: " + error};
+                return  res.status(500).jsonp(resp);
+            }
+            let resp = {"code":200,"res" : "Email sent","data" : req.body};
+            return res.status(200).jsonp(resp);
+        });
+    });    
+});
+
+/**
+* Here we're using mstp2go to send 
 */
 function generateTransport(){
     console.log("<---generateTransport--->");
@@ -22,13 +42,18 @@ function generateTransport(){
     })
 }
 
+/**
+ * Generate email body
+ * @param {*} req 
+ * @param {*} htmlToSend 
+ */
 function generateEmail(req, htmlToSend) {
     console.log("<---generateEmail--->");
     let from = req.body.from;
     let to = req.body.to;
     let subject = req.body.subject;
-    let text = req.body.text;
-    /*console.log("from -> "  + from);
+    /*let text = req.body.text;
+    console.log("from -> "  + from);
     console.log("to -> "  + to);
     console.log("subject -> "  + subject);
     console.log("text -> "  + text);*/
@@ -46,30 +71,44 @@ function generateEmail(req, htmlToSend) {
       }*/
 }
 
-function generateTemplate(templateName){
+/**
+ * Generate html with template
+ * @param {*} request 
+ */
+function generateTemplate(request){
     console.log("<---generateTemplate--->");
-    const filePath = path.join(__dirname, '/templates/'+templateName+'.html');
+    const filePath = path.join(__dirname, '/templates/'+request.templateName+'.html');
     const source = fs.readFileSync(filePath, 'utf-8').toString();
     const template = handlebars.compile(source);
-    const replacements = {
-        name: "Eduardo Molina"
-    };
+    const replacements = generateDataTemplate(request);
     return htmlToSend = template(replacements);
 }
 
-exports.sendMail = functions.https.onRequest((req, res) => {
-    cors(req, res, () => {
-        console.log("<---sendMail--->");
-        let transporter = generateTransport();
-        let htmlToSend = generateTemplate('Email-Confirmation');
-        let mailOptions = generateEmail(req, htmlToSend);
-        return transporter.sendMail(mailOptions, (erro, info) => {
-            if(erro){
-                let resp = {"code": 500,"res" : "error: " + error};
-                return  res.status(500).jsonp(resp);
-            }
-            let resp = {"code":200,"res" : "Email sent","data" : req.body};
-            return res.status(200).jsonp(resp);
-        });
-    });    
-});
+/**
+ * Select template
+ * @param {*} request 
+ */
+function generateDataTemplate(request){
+    console.log("<---replacements--->");
+    let replacements;
+    switch (request.templateName) {
+        case 'Email-Confirmation':
+            console.log("name--->"+request.data.name);
+            replacements = {
+                name: request.data.name
+            };
+          break;
+        case 'Invitation-Collaborators':
+            console.log("userName--->"+request.data.userName);
+            replacements = {
+                nameCollaborator: request.data.nameCollaborator,
+                userName: request.data.userName,
+                businessName: request.data.businessName
+            };
+          break;
+        default:
+          console.log('No existe template');
+      }
+      return replacements;
+}
+
