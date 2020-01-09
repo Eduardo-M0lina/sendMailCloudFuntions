@@ -80,6 +80,7 @@
       height: 9px;
       margin: auto;
       margin-bottom: 24px;
+      font-family: FSJoey;
       align-items: center;
       display: flex;
       background-color: #37857c;
@@ -90,9 +91,22 @@
       height: 10px;
       margin: auto;
       margin-bottom: 24px;
+      font-family: FSJoey;
       align-items: center;
       display: flex;
-      background-image: linear-gradient(to right, #e6e460, #bbd866, #94c96e, #72b975, #57a77a, #359880, #148883, #007881, #006581, #00517a, #213c6b, #362554);
+      background-image: linear-gradient(to right,
+          #e6e460,
+          #bbd866,
+          #94c96e,
+          #72b975,
+          #57a77a,
+          #359880,
+          #148883,
+          #007881,
+          #006581,
+          #00517a,
+          #213c6b,
+          #362554);
     }
 
     .yellow-Rectangle {
@@ -101,10 +115,11 @@
       margin: auto;
       margin-top: 61px;
       margin-bottom: 61px;
+      font-family: FSJoey;
       align-items: center;
       display: flex;
       background-color: #edec47;
-      font-size: 33px;
+      font-size: 30px;
       color: #5c0e76;
     }
 
@@ -171,6 +186,15 @@
       color: #000000;
     }
 
+    .purple-text {
+      margin: auto;
+      margin-bottom: 8px;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      color: #5c0e76;
+    }
+
     .small-text {
       width: 624px;
       margin: auto;
@@ -192,16 +216,31 @@
     }
 
     .purple-title {
+      width: 600px;
       margin: auto;
+      margin-top: 41px;
+      margin-bottom: 47px;
       align-items: center;
       text-align: center;
       font-size: 30px;
       color: #5c0e76;
     }
 
+    .medium-purple-title {
+      width: 600px;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+      text-align: center;
+      font-size: 25px;
+      color: #5c0e76;
+    }
+
     .text-cont {
-      width: 560px;
+      width: 510px;
       height: 52px;
+      font-family: FSJoey;
       font-size: 20px;
       margin: auto;
       align-items: center;
@@ -212,6 +251,7 @@
     .text-cont-copy {
       width: 635px;
       height: 52px;
+      font-family: FSJoey;
       font-size: 20px;
       margin: auto;
       align-items: center;
@@ -220,7 +260,7 @@
     }
 
     .title-cont {
-      width: 569px;
+      width: 630px;
       height: 72px;
       margin: auto;
       margin-top: 15px;
@@ -235,6 +275,10 @@
       margin: 75px;
     }
 
+    .text-separator {
+      margin: 120px;
+    }
+
     .button {
       border: none;
       border-radius: 25px;
@@ -245,7 +289,8 @@
       display: flex;
       background: linear-gradient(to right, #37857c, #333056);
       color: #ffffff;
-      width: 150px;
+      width: 190px;
+      height: 38px;
       margin-top: 38px;
       margin-bottom: 38px;
       padding: 5px;
@@ -267,7 +312,6 @@
       padding: 30px;
     }
 
-
     .circle {
       line-height: 25px;
       text-align: center;
@@ -283,7 +327,7 @@
 
     .document-cont {
       margin: auto;
-      margin-top: 27px;
+      margin-top: 33px;
       margin-bottom: 47px;
       align-items: center;
       text-align: center;
@@ -304,47 +348,64 @@
   </div>
 
   <div class="big-title">
-    <span>¡Hola, {{collaboratorName}}!</span>
+    <span>¡Hola, {{userName}}!</span>
   </div>
 
   <div>
     <div class="green-Rectangle"></div>
-    <div class="green-title">
-      <span>{{userName}} te invitó a colaborar con el crecimiento de
-        {{businessName}}</span>
+    <div class="purple-title">
+      <span> <b> Somos Finaktiva, </b> la financiera de los empresarios con más futuro que historia.</span>
     </div>
     <img class="image-cont"
-      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/workers.png?alt=media&token=8ce50f57-671f-40e0-9d49-bc50ff01997c"
+      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/employees-gathered.png?alt=media&token=5dfac08f-bbbe-4ebd-aac5-1263dccd02ea"
       alt="">
   </div>
 
   <div class="text-cont">
-    <span>¡Es muy fácil y simple!</span>
+    <span class="grey-text">Queremos contarte que</span>
+  </div>
+
+  <div class="medium-purple-title">
+    <span>
+      {{socialReason}}
+    </span>
   </div>
 
   <div class="text-cont">
-    <span class="grey-text">
-      Diligencia el formulario de nuestra plataforma de crédito y hazte aliado en el crecimiento de tu empresa.
+    <span>
+      <b class="grey-text"> Está impulsando su crecimiento a través de una solicitud de crédito en nuestra plataforma de
+        crédito digital y </b> te invitó a diligenciar una encuesta <b class="grey-text"> en la que confirmarás algunos
+        datos proporcionados por </b> {{socialReason}} <b class="grey-text"> en su solicitud. </b>
     </span>
+  </div>
+
+  <div class="text-separator">
+
+  </div>
+
+  <div class="text-cont-copy">
+    <span class="grey-text">Te tomará menos de dos minutos y la información que nos proporciones será de gran valor para
+      nuestro estudio de crédito. </span>
   </div>
 
   <div class="document-cont">
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/document-icon.png?alt=media&token=4ca1bde8-2bf9-4e54-9be5-e9ef34111179"
+      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/purple-document-icon.png?alt=media&token=a7ef1b3e-c758-49fb-b1bc-7000e4b0940f"
       alt="">
   </div>
 
   <button class="button">
-    Colaborar
+    Ir a la encuesta
   </button>
 
   <div class="yellow-Rectangle">
-    <img class="icon-cont"
-      src="https://firebasestorage.googleapis.com/v0/b/finaktiva-dev.appspot.com/o/icono-indicadores-2-d%403x.png?alt=media&token=50f465f1-d453-4747-8263-f3a02acf9576"
-      alt="">
     <span class="title-cont">
-      <b class="green-text"> FINALIZA TU REGISTRO </b> y lleva tu empresa a otro nivel.
+      <b class="green-text"> ¡GRACIAS! </b> Juntos seremos aliados en el crecimiento de las empresas en Colombia.
     </span>
+  </div>
+
+  <div class="text-cont">
+    <span class="purple-text">{{socialReason}} y</span>
   </div>
 
   <div class="logo-cont">
